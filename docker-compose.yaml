@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./fe
+      dockerfile: Dockerfile
+    container_name: IOD-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./fe:/workspace
+      - ./assets:/workspace/assets
+      - /workspace/node_modules
+    command: npm run start
+    tty: true
+
+  backend:
+    build:
+      context: ./be
+      dockerfile: Dockerfile
+    container_name: IOD-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./be:/workspace
+      - ./assets:/workspace/assets
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    tty: true
