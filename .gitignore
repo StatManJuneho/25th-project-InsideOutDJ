@@ -1,0 +1,39 @@
+.DS_Store
+be/.env
+/fe/node_modules
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+fe/node_modules
+fe/.pnp
+fe/.pnp.js
+
+# testing
+fe/coverage
+
+# production
+fe/build
+
+# misc
+fe/.DS_Store
+fe/.env.local
+fe/.env.development.local
+fe/.env.test.local
+fe/.env.production.local
+
+fe/npm-debug.log*
+fe/yarn-debug.log*
+fe/yarn-error.log*
+
+
+be/.DS_Store
+be/myenv
+be/__pycache__
+
+be/tracks_final.csv
+be/result_arousal_state_dict.pth
+be/result_valence_state_dict.pth
+be/순서형회귀모델_v1.pth
+be/assets
+be/checkpoint-25060
+be/checkpoint-43855
